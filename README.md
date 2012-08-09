@@ -1,0 +1,1 @@
+Share It is a "private public rss feed" for sharing links between a selected group of people
