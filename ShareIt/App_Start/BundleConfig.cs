@@ -15,11 +15,21 @@ namespace ShareIt
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                         "~/Scripts/bootstrap.js"));
 
+
+            bundles.Add(new ScriptBundle("~/bundles/requirejs").Include(
+                        "~/Scripts/require.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/backbone").Include(
+                        "~/Scripts/underscore.js", "~/Scripts/backbone.js"));
+
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-1.*"));
 
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                         "~/Scripts/modernizr-*"));
+
+            bundles.Add(new ScriptBundle("~/bundles/app").Include(
+                        "~/Scripts/app/app.js"));
 
             /*
 
