@@ -255,7 +255,9 @@
     <Content Include="Scripts\underscore.min.js">
       <DependentUpon>underscore.js</DependentUpon>
     </Content>
+    <Content Include="tpl\feedDetails.html" />
     <Content Include="tpl\intro.html" />
+    <Content Include="tpl\newFeed.html" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

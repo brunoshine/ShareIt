@@ -36,3 +36,5 @@ D:\myGitHub\ShareIt\ShareIt\obj\Debug\ShareIt.pdb
 D:\myGitHub\ShareIt\ShareIt\bin\RedBranch.Hammock.dll
 D:\myGitHub\ShareIt\ShareIt\bin\Newtonsoft.Json.xml
 D:\myGitHub\ShareIt\ShareIt\bin\RedBranch.Hammock.pdb
+C:\temp\ShareIt.dll
+C:\temp\ShareIt.pdb
