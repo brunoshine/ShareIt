@@ -19,9 +19,9 @@ function releasetheKraken() {
 
     $.ajax({
         type: "PUT",
-        url: "/api/feeds/" + window.sharemeFeedId,
+        url: "http://shareit.apphb.com/api/feeds/" + window.sharemeFeedId,
         data: JSON.stringify(data),
         contentType: "application/json; charset=utf-8",
-        success: function () { debugger;},
+        success: function () { alert("added...");},
     });
 }
