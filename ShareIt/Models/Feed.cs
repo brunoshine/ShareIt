@@ -7,6 +7,13 @@ namespace ShareIt.Models
 {
     public class Feed
     {
+        public Feed()
+        {
+            Items = new List<FeedItem>();   
+            Users = new List<User>();
+        }
+
+        public Guid Id { get; set; }
         public string Name { get; set; }
         public bool Private { get; set; }
 
@@ -26,5 +33,6 @@ namespace ShareIt.Models
         public string Title { get; set; }
         public string Url { get; set; }
         public string Description { get; set; }
+        public DateTime PublishedDate { get; set; }
     }
 }

@@ -1,1 +1,14 @@
-﻿<h3>Feed Details</h3>
+﻿<h3><%= Name %></h3>
+
+<div class="row-fluid">
+    <div class="span9">
+    </div>
+    <div class="span3">
+        <div class="well sidebar-nav">
+            <div style="text-align:center">
+                <a href="javascript: (function () {window.sharemeFeedId='<%=Id %>';var jsCode = document.createElement('script');jsCode.setAttribute('src', '/scripts/bookmarklet.js');document.body.appendChild(jsCode);}());" class="btn btn-info" title="dragg me to the bookmark bar to publish to this feed"><i class="icon-bookmark icon-white"></i>Add to <%= Name %></a><br />
+                <a href="/rss/<%=Id %>"><img src="content/images/rss2_buttons_02.png" alt="Subscribe this Rss feed" title="Subscribe this Rss feed"/></a>
+            </div>
+        </div>
+    </div>
+</div>

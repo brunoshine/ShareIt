@@ -21,24 +21,39 @@ namespace ShareIt.Controllers
         // GET api/values
         public IEnumerable<Feed> GetAll()
         {
+            return null;
             var repository = Repository.Get<Feed>();
             return repository.All().ToList();
         }
 
         // GET api/values/5
-        public string Get(int id)
+        public Feed Get(Guid id)
         {
-            return "value";
+            var feeds = Repository.Get<Feed>();
+            var feed = feeds.Where(x => x.Id).Eq(id).FirstOrDefault();
+            return feed;
         }
         
         // POST api/values
-        public void Post(string value)
+        public object Post(Feed feed)
         {
+            feed.Id = Guid.NewGuid();
+            var repository = Repository.Get<Feed>();
+            repository.Save(feed);
+            return new { id = feed.Id };
         }
 
         // PUT api/values/5
-        public void Put(int id, string value)
+        public void Put(Guid id, FeedItem item)
         {
+            var feeds = Repository.Get<Feed>();
+            var feed = feeds.Where(x => x.Id).Eq(id).FirstOrDefault();
+            if (feed != null)
+            {
+                item.PublishedDate = DateTime.Now;
+                feed.Items.Add(item);
+                feeds.Save(feed);
+            }
         }
 
         // DELETE api/values/5
