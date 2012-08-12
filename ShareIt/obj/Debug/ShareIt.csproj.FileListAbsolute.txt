@@ -38,3 +38,6 @@ D:\myGitHub\ShareIt\ShareIt\bin\Newtonsoft.Json.xml
 D:\myGitHub\ShareIt\ShareIt\bin\RedBranch.Hammock.pdb
 C:\temp\ShareIt.dll
 C:\temp\ShareIt.pdb
+D:\myGitHub\ShareIt\ShareIt\bin\Elmah.dll
+D:\myGitHub\ShareIt\ShareIt\bin\Elmah.Mvc.dll
+D:\myGitHub\ShareIt\ShareIt\bin\WebActivator.dll
