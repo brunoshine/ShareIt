@@ -7,7 +7,7 @@ using System.Web.Mvc;
 
 namespace ShareIt.Controllers
 {
-    public class DebugController : Controller
+    public class HelperSettingsController : Controller
     {
         //
         // GET: /Debug/
