@@ -5,7 +5,7 @@ namespace ShareIt.App_Start
     {
         public static void Start()
         {
-            Elmah.Mvc.Bootstrap.Initialize();
+            //Elmah.Mvc.Bootstrap.Initialize();
         }
     }
 }
