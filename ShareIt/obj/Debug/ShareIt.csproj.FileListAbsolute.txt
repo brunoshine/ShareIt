@@ -1,7 +1,6 @@
 D:\myGitHub\ShareIt\ShareIt\bin\ShareIt.dll
 D:\myGitHub\ShareIt\ShareIt\bin\ShareIt.pdb
 D:\myGitHub\ShareIt\ShareIt\bin\Antlr3.Runtime.dll
-D:\myGitHub\ShareIt\ShareIt\bin\EntityFramework.dll
 D:\myGitHub\ShareIt\ShareIt\bin\Microsoft.Web.Infrastructure.dll
 D:\myGitHub\ShareIt\ShareIt\bin\Newtonsoft.Json.dll
 D:\myGitHub\ShareIt\ShareIt\bin\System.Net.Http.dll
@@ -18,7 +17,6 @@ D:\myGitHub\ShareIt\ShareIt\bin\System.Web.WebPages.Deployment.dll
 D:\myGitHub\ShareIt\ShareIt\bin\System.Web.WebPages.dll
 D:\myGitHub\ShareIt\ShareIt\bin\System.Web.WebPages.Razor.dll
 D:\myGitHub\ShareIt\ShareIt\bin\WebGrease.dll
-D:\myGitHub\ShareIt\ShareIt\bin\EntityFramework.xml
 D:\myGitHub\ShareIt\ShareIt\bin\System.Net.Http.xml
 D:\myGitHub\ShareIt\ShareIt\bin\System.Net.Http.Formatting.xml
 D:\myGitHub\ShareIt\ShareIt\bin\System.Net.Http.WebRequest.xml
@@ -30,7 +28,6 @@ D:\myGitHub\ShareIt\ShareIt\bin\System.Web.Razor.xml
 D:\myGitHub\ShareIt\ShareIt\bin\System.Web.WebPages.xml
 D:\myGitHub\ShareIt\ShareIt\bin\System.Web.WebPages.Deployment.xml
 D:\myGitHub\ShareIt\ShareIt\bin\System.Web.WebPages.Razor.xml
-D:\myGitHub\ShareIt\ShareIt\obj\Debug\ShareIt.csprojResolveAssemblyReference.cache
 D:\myGitHub\ShareIt\ShareIt\obj\Debug\ShareIt.dll
 D:\myGitHub\ShareIt\ShareIt\obj\Debug\ShareIt.pdb
 D:\myGitHub\ShareIt\ShareIt\bin\RedBranch.Hammock.dll

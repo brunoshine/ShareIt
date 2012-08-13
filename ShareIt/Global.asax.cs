@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.Entity;
-using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Web;
+using System.Web.Configuration;
 using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
@@ -24,6 +24,36 @@ namespace ShareIt
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            SetWebAPILogging();
+        }
+
+        private void SetWebAPILogging()
+        {
+            var config = (CustomErrorsSection)ConfigurationManager.GetSection("system.web/customErrors");
+
+            IncludeErrorDetailPolicy errorDetailPolicy;
+
+            switch (config.Mode)
+            {
+                case CustomErrorsMode.RemoteOnly:
+                    errorDetailPolicy
+                        = IncludeErrorDetailPolicy.LocalOnly;
+                    break;
+                case CustomErrorsMode.On:
+                    errorDetailPolicy
+                        = IncludeErrorDetailPolicy.Never;
+                    break;
+                case CustomErrorsMode.Off:
+                    errorDetailPolicy
+                        = IncludeErrorDetailPolicy.Always;
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
+
+            GlobalConfiguration.Configuration.IncludeErrorDetailPolicy
+                = errorDetailPolicy;
         }
     }
 }
