@@ -10,6 +10,7 @@ using ShareIt.Models;
 
 namespace ShareIt.Controllers
 {
+    [HandleError]
     public class RssController : Controller
     {
         public ActionResult Index(Guid id)

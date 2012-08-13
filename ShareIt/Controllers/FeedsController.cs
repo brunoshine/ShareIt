@@ -4,11 +4,13 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Mvc;
 using mstum.utils;
 using ShareIt.Models;
 
 namespace ShareIt.Controllers
 {
+    [HandleError]
     public class FeedsController : ApiController
     {
         static byte[] GetBytes(string str)
