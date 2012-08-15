@@ -7,7 +7,9 @@
     template: null,
 
     render: function () {
-        var html = this.template(this.model.toJSON());
+        var model = this.model.toJSON();
+        model.Url = window.location.protocol + "//" + window.location.host + "/";
+        var html = this.template(model);
         return $(this.el).append(html);
     }
 });

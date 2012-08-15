@@ -144,6 +144,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\FeedsController.cs" />
     <Compile Include="Controllers\RssController.cs" />
+    <Compile Include="Controllers\ScriptsController.cs" />
     <Compile Include="Core\Base36.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -229,7 +230,6 @@
     <Content Include="Scripts\backbone.min.js">
       <DependentUpon>backbone.js</DependentUpon>
     </Content>
-    <Content Include="Scripts\bookmarklet.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js">
       <DependentUpon>bootstrap.js</DependentUpon>
@@ -267,6 +267,10 @@
       <DependentUpon>json2.js</DependentUpon>
     </Content>
     <Content Include="Scripts\modernizr-2.5.3.js" />
+    <Content Include="Scripts\moment.js" />
+    <Content Include="Scripts\moment.min.js">
+      <DependentUpon>moment.js</DependentUpon>
+    </Content>
     <Content Include="Scripts\r.js" />
     <Content Include="Scripts\require.js" />
     <Content Include="Scripts\require.min.js">
@@ -279,6 +283,7 @@
     </Content>
     <Content Include="tpl\feedDetails.html" />
     <Content Include="tpl\intro.html" />
+    <Content Include="tpl\item.html" />
     <Content Include="tpl\newFeed.html" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -318,6 +323,8 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Shared\_BootstrapLayout.cshtml" />
     <Content Include="Views\HelperSettings\Index.cshtml" />
+    <Content Include="Views\Scripts\bookmarklet.cshtml" />
+    <Content Include="Views\Shared\_ScriptsLayout.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

@@ -7,6 +7,7 @@ require([
     "scripts/text!tpl/intro.html",
     "scripts/text!tpl/newFeed.html",
     "scripts/text!tpl/feedDetails.html",
+    "scripts/text!tpl/item.html",
 
     // models
     "scripts/app/models/feed.js",
@@ -21,11 +22,12 @@ require([
 
     "scripts/json2.js"
     ],
-    function (intro, newFeed, feedDetails) {
+    function (intro, newFeed, feedDetails, feedItem) {
         window.templates = {};
         window.templates.intro = intro;
         window.templates.newFeed = newFeed;
         window.templates.feedDetails = feedDetails;
+        window.templates.feedItem = feedItem;
 
         window.app = new AppRouter();
         Backbone.history.start();

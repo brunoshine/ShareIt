@@ -9,7 +9,8 @@ namespace ShareIt
         {
             bundles.Add(new StyleBundle("~/Content/bootstrap").Include(
                 "~/Content/bootstrap.min.css",
-                "~/Content/bootstrap-responsive.min.css"
+                "~/Content/bootstrap-responsive.min.css",
+                "~/Content/site.css"
             ));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
@@ -24,7 +25,8 @@ namespace ShareIt
 
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-1.*",
-                        "~/Scripts/jquery.blockUI.js"));
+                        "~/Scripts/jquery.blockUI.js",
+                        "~/Scripts/moment.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                         "~/Scripts/modernizr-*"));

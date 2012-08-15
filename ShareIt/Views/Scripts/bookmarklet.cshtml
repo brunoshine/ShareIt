@@ -1,14 +1,23 @@
-﻿if (!($ = window.jQuery)) { // typeof jQuery=='undefined' works too
+﻿
+@functions{
+    public string Url()
+    {
+        HttpRequest request = HttpContext.Current.Request;
+        return request.Url.AbsoluteUri.Replace(request.Url.AbsolutePath, String.Empty);
+    }
+}
+
+if (!($ = window.jQuery)) {
     script = document.createElement('script');
     script.src = 'http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js';
-    script.onload = releasetheKraken;
+    script.onload = bookmarkletLoaded;
     document.body.appendChild(script);
 }
 else {
-    releasetheKraken();
+    bookmarkletLoaded();
 }
 
-function releasetheKraken() {
+function bookmarkletLoaded() {
 
     var data = { 
         Title: document.title,
@@ -19,7 +28,7 @@ function releasetheKraken() {
 
     $.ajax({
         type: "PUT",
-        url: "http://shareit.apphb.com/api/feeds/" + window.sharemeFeedId,
+        url: "@Url()/api/feeds/" + window.sharemeFeedId,
         data: JSON.stringify(data),
         contentType: "application/json; charset=utf-8",
         success: function () { alert("added...");},
