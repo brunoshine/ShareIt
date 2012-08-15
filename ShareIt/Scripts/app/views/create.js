@@ -7,6 +7,7 @@
         _.bindAll(this, 'render');
     },
     onCreate: function () {
+        $.blockUI();
         var _self = this;
         var model = new Feed({Name : $("#txtFeedName").val()});
         $('#myModal').modal("hide");
@@ -15,7 +16,9 @@
             success: function (result) {
                 window.location = _self.path + result.id;
                 window.activeModel = result;
-            }, error: function () { }, wait: true
+            }, error: function () {
+                $.unblockUI();
+            }, wait: true
         });
         /*
         window.feeds.create(model, {success :function(result){

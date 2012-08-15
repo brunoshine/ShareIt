@@ -30,15 +30,22 @@
     feedDetails: function (id) {
         var self = this;
         if (!window.activeModel) {
-            var solaris = new Feed({ id: id });
-            solaris.fetch({
+            $.blockUI();
+            var feed = new Feed({ id: id });
+            feed.fetch({
                 success: function (model) {
-                    window.activeModel = model;
-                    self.feedDetails(model.Id);
+                    if (model.attributes.Name != "") {
+                        window.activeModel = model;
+                        self.feedDetails(model.Id);
+                    } else {
+                        alert("No feed found!");
+                        $.unblockUI();
+                    }
                 }
             });
         }else{
-            $("#main").html(new detailsView({model:window.activeModel}).render());
+            $("#main").html(new detailsView({ model: window.activeModel }).render());
+            $.unblockUI();
         }
     }
 });

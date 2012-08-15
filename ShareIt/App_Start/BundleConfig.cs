@@ -23,7 +23,8 @@ namespace ShareIt
                         "~/Scripts/underscore.js", "~/Scripts/backbone.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                        "~/Scripts/jquery-1.*"));
+                        "~/Scripts/jquery-1.*",
+                        "~/Scripts/jquery.blockUI.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                         "~/Scripts/modernizr-*"));

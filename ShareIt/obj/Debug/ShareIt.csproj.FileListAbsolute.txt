@@ -38,3 +38,4 @@ C:\temp\ShareIt.pdb
 D:\myGitHub\ShareIt\ShareIt\bin\Elmah.dll
 D:\myGitHub\ShareIt\ShareIt\bin\Elmah.Mvc.dll
 D:\myGitHub\ShareIt\ShareIt\bin\WebActivator.dll
+D:\myGitHub\ShareIt\ShareIt\obj\Debug\ShareIt.csprojResolveAssemblyReference.cache

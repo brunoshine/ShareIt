@@ -1,6 +1,7 @@
 ﻿var Feed = Backbone.Model.extend({
     defaults: { Name: "" },
-    urlRoot: '/api/feeds'
+    urlRoot: '/api/feeds',
+    idAttribute: 'Id',
 });
 /*
 var FeedCollection = Backbone.Collection.extend({
