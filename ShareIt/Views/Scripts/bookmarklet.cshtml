@@ -1,10 +1,22 @@
 ﻿
 @functions{
-    public string Url()
-    {
-        HttpRequest request = HttpContext.Current.Request;
-        return request.Url.AbsoluteUri.Replace(request.Url.AbsolutePath, String.Empty);
-    }
+    public static string ToPublicUrl(this UrlHelper urlHelper)
+	{
+		var httpContext = urlHelper.RequestContext.HttpContext;
+		var uriBuilder = new UriBuilder
+		{
+				Host = httpContext.Request.Url.Host,
+				Path = "/",
+				Port = 80,
+				Scheme = "http",
+		};
+
+		if (httpContext.Request.IsLocal)
+		{
+			uriBuilder.Port = httpContext.Request.Url.Port;
+		}
+		return new Uri(uriBuilder.Uri).AbsoluteUri;
+	}
 }
 
 if (!($ = window.jQuery)) {
@@ -28,7 +40,7 @@ function bookmarkletLoaded() {
 
     $.ajax({
         type: "PUT",
-        url: "@Url()/api/feeds/" + window.sharemeFeedId,
+        url: "@Url.ToPublicUrl()/api/feeds/" + window.sharemeFeedId,
         data: JSON.stringify(data),
         contentType: "application/json; charset=utf-8",
         success: function () { alert("added...");},
