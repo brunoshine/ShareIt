@@ -1,24 +1,4 @@
 ﻿
-@functions{
-    public static string ToPublicUrl(this UrlHelper urlHelper)
-	{
-		var httpContext = urlHelper.RequestContext.HttpContext;
-		var uriBuilder = new UriBuilder
-		{
-				Host = httpContext.Request.Url.Host,
-				Path = "/",
-				Port = 80,
-				Scheme = "http",
-		};
-
-		if (httpContext.Request.IsLocal)
-		{
-			uriBuilder.Port = httpContext.Request.Url.Port;
-		}
-		return new Uri(uriBuilder.Uri).AbsoluteUri;
-	}
-}
-
 if (!($ = window.jQuery)) {
     script = document.createElement('script');
     script.src = 'http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js';
@@ -40,7 +20,7 @@ function bookmarkletLoaded() {
 
     $.ajax({
         type: "PUT",
-        url: "@Url.ToPublicUrl()/api/feeds/" + window.sharemeFeedId,
+        url: "@Url.ToPublicUrl()api/feeds/" + window.sharemeFeedId,
         data: JSON.stringify(data),
         contentType: "application/json; charset=utf-8",
         success: function () { alert("added...");},
