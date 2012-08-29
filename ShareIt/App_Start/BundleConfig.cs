@@ -10,15 +10,12 @@ namespace ShareIt
             bundles.Add(new StyleBundle("~/Content/bootstrap").Include(
                 "~/Content/bootstrap.min.css",
                 "~/Content/bootstrap-responsive.min.css",
-                "~/Content/site.css"
+                "~/Content/site.css",
+                "~/Content/OpenID/css/openid.css"
             ));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                         "~/Scripts/bootstrap.js"));
-
-            bundles.Add(new StyleBundle("~/Content/openid").Include(
-                        "~/Content/OpenID/css/openid.css"));
-
 
             bundles.Add(new ScriptBundle("~/bundles/openid").Include(
                         "~/Scripts/openid-jquery.js","~/Scripts/openid-en.js"));
