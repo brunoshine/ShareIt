@@ -16,6 +16,13 @@ namespace ShareIt
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                         "~/Scripts/bootstrap.js"));
 
+            bundles.Add(new StyleBundle("~/Content/openid").Include(
+                        "~/Content/OpenID/css/openid.css"));
+
+
+            bundles.Add(new ScriptBundle("~/bundles/openid").Include(
+                        "~/Scripts/openid-jquery.js","~/Scripts/openid-en.js"));
+
 
             bundles.Add(new ScriptBundle("~/bundles/requirejs").Include(
                         "~/Scripts/require.js"));

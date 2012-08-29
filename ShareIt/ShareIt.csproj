@@ -40,6 +40,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DotNetOpenAuth.Core">
+      <HintPath>..\packages\DotNetOpenAuth.Core.4.1.0.12182\lib\net40-full\DotNetOpenAuth.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId">
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.Core.4.1.0.12182\lib\net40-full\DotNetOpenAuth.OpenId.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId.RelyingParty">
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.RelyingParty.4.1.0.12182\lib\net40-full\DotNetOpenAuth.OpenId.RelyingParty.dll</HintPath>
+    </Reference>
     <Reference Include="Elmah">
       <HintPath>..\packages\elmah.corelibrary.1.2.2\lib\Elmah.dll</HintPath>
     </Reference>
@@ -140,6 +149,7 @@
     <Compile Include="App_Start\ElmahMvc_Start.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HelperSettingsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\FeedsController.cs" />
@@ -164,6 +174,8 @@
     <Content Include="Content\images\glyphicons-halflings-white.png" />
     <Content Include="Content\images\glyphicons-halflings.png" />
     <Content Include="Content\images\rss2_buttons_02.png" />
+    <Content Include="Content\OpenId\css\openid-shadow.css" />
+    <Content Include="Content\OpenId\css\openid.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -220,6 +232,92 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="images.large\aol.gif" />
+    <Content Include="images.large\facebook.gif" />
+    <Content Include="images.large\google.gif" />
+    <Content Include="images.large\mailru.gif" />
+    <Content Include="images.large\myopenid.gif" />
+    <Content Include="images.large\openid.gif" />
+    <Content Include="images.large\rambler.gif" />
+    <Content Include="images.large\verisign.gif" />
+    <Content Include="images.large\vkontakte.gif" />
+    <Content Include="images.large\yahoo.gif" />
+    <Content Include="images.large\yandex.gif" />
+    <Content Include="images.small\aol.ico" />
+    <Content Include="images.small\aol.ico.gif" />
+    <Content Include="images.small\aol.ico.png" />
+    <Content Include="images.small\blogger.ico" />
+    <Content Include="images.small\blogger.ico.gif" />
+    <Content Include="images.small\blogger.ico.png" />
+    <Content Include="images.small\claimid.ico" />
+    <Content Include="images.small\claimid.ico.gif" />
+    <Content Include="images.small\claimid.ico.png" />
+    <Content Include="images.small\clickpass.ico" />
+    <Content Include="images.small\clickpass.ico.gif" />
+    <Content Include="images.small\clickpass.ico.png" />
+    <Content Include="images.small\facebook.ico" />
+    <Content Include="images.small\facebook.ico.gif" />
+    <Content Include="images.small\facebook.ico.png" />
+    <Content Include="images.small\flickr.ico" />
+    <Content Include="images.small\flickr.ico.gif" />
+    <Content Include="images.small\flickr.ico.png" />
+    <Content Include="images.small\google.ico" />
+    <Content Include="images.small\google.ico.gif" />
+    <Content Include="images.small\google.ico.png" />
+    <Content Include="images.small\google_profile.ico" />
+    <Content Include="images.small\google_profile.ico.gif" />
+    <Content Include="images.small\google_profile.ico.png" />
+    <Content Include="images.small\launchpad.ico" />
+    <Content Include="images.small\launchpad.ico.gif" />
+    <Content Include="images.small\launchpad.ico.png" />
+    <Content Include="images.small\linkedin.ico" />
+    <Content Include="images.small\linkedin.ico.gif" />
+    <Content Include="images.small\linkedin.ico.png" />
+    <Content Include="images.small\livejournal.ico" />
+    <Content Include="images.small\livejournal.ico.gif" />
+    <Content Include="images.small\livejournal.ico.png" />
+    <Content Include="images.small\mailru.ico" />
+    <Content Include="images.small\mailru.ico.gif" />
+    <Content Include="images.small\mailru.ico.png" />
+    <Content Include="images.small\myopenid.ico" />
+    <Content Include="images.small\myopenid.ico.gif" />
+    <Content Include="images.small\myopenid.ico.png" />
+    <Content Include="images.small\openid.ico" />
+    <Content Include="images.small\openid.ico.gif" />
+    <Content Include="images.small\openid.ico.png" />
+    <Content Include="images.small\rambler.ico" />
+    <Content Include="images.small\rambler.ico.gif" />
+    <Content Include="images.small\rambler.ico.png" />
+    <Content Include="images.small\technorati.ico" />
+    <Content Include="images.small\technorati.ico.gif" />
+    <Content Include="images.small\technorati.ico.png" />
+    <Content Include="images.small\twitter.ico" />
+    <Content Include="images.small\twitter.ico.gif" />
+    <Content Include="images.small\twitter.ico.png" />
+    <Content Include="images.small\verisign.ico" />
+    <Content Include="images.small\verisign.ico.gif" />
+    <Content Include="images.small\verisign.ico.png" />
+    <Content Include="images.small\vidoop.ico" />
+    <Content Include="images.small\vidoop.ico.gif" />
+    <Content Include="images.small\vidoop.ico.png" />
+    <Content Include="images.small\vkontakte.ico" />
+    <Content Include="images.small\vkontakte.ico.gif" />
+    <Content Include="images.small\vkontakte.ico.png" />
+    <Content Include="images.small\winliveid.ico" />
+    <Content Include="images.small\winliveid.ico.gif" />
+    <Content Include="images.small\winliveid.ico.png" />
+    <Content Include="images.small\wordpress.ico" />
+    <Content Include="images.small\wordpress.ico.gif" />
+    <Content Include="images.small\wordpress.ico.png" />
+    <Content Include="images.small\yahoo.ico" />
+    <Content Include="images.small\yahoo.ico.gif" />
+    <Content Include="images.small\yahoo.ico.png" />
+    <Content Include="images.small\yandex.ico" />
+    <Content Include="images.small\yandex.ico.gif" />
+    <Content Include="images.small\yandex.ico.png" />
+    <Content Include="Images\openid-inputicon.gif" />
+    <Content Include="Images\openid-providers-en.png" />
+    <Content Include="Images\openid-providers-ru.png" />
     <Content Include="Require.JS - LICENSE.txt" />
     <Content Include="Scripts\app\app.js" />
     <Content Include="Scripts\app\models\feed.js" />
@@ -272,6 +370,8 @@
     <Content Include="Scripts\moment.min.js">
       <DependentUpon>moment.js</DependentUpon>
     </Content>
+    <Content Include="Scripts\openid-en.js" />
+    <Content Include="Scripts\openid-jquery.js" />
     <Content Include="Scripts\r.js" />
     <Content Include="Scripts\require.js" />
     <Content Include="Scripts\require.min.js">
@@ -326,6 +426,8 @@
     <Content Include="Views\HelperSettings\Index.cshtml" />
     <Content Include="Views\Scripts\bookmarklet.cshtml" />
     <Content Include="Views\Shared\_ScriptsLayout.cshtml" />
+    <Content Include="Views\Shared\_OpenIdSelector.cshtml" />
+    <Content Include="Views\Account\LogOn.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

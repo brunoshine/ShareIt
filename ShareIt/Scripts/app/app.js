@@ -31,6 +31,5 @@ require([
 
         window.app = new AppRouter();
         Backbone.history.start();
-
     }
 );

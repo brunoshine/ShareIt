@@ -15,9 +15,6 @@ function bookmarkletLoaded() {
         Title: document.title,
         Url: window.location.href
     };
-
-    console.dir(data);
-
     $.ajax({
         type: "PUT",
         url: "@Url.ToPublicUrl()api/feeds/" + window.sharemeFeedId,

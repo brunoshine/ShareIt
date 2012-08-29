@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "LogOn";
+}
+    @Html.Partial("_OpenIdSelector")
+
+
+@section scripts{
+      <script>
+
+          $(document).ready(function () {
+              openid.init('openid_identifier');
+          });
+
+      </script>
+
+      }

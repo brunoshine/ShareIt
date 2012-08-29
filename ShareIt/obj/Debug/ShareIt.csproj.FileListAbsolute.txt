@@ -39,3 +39,13 @@ D:\myGitHub\ShareIt\ShareIt\bin\Elmah.dll
 D:\myGitHub\ShareIt\ShareIt\bin\Elmah.Mvc.dll
 D:\myGitHub\ShareIt\ShareIt\bin\WebActivator.dll
 D:\myGitHub\ShareIt\ShareIt\obj\Debug\ShareIt.csprojResolveAssemblyReference.cache
+D:\myGitHub\ShareIt\ShareIt\bin\DotNetOpenAuth.Core.dll
+D:\myGitHub\ShareIt\ShareIt\bin\DotNetOpenAuth.OpenId.dll
+D:\myGitHub\ShareIt\ShareIt\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+D:\myGitHub\ShareIt\ShareIt\bin\Org.Mentalis.Security.Cryptography.dll
+D:\myGitHub\ShareIt\ShareIt\bin\Mono.Math.dll
+D:\myGitHub\ShareIt\ShareIt\bin\DotNetOpenAuth.Core.xml
+D:\myGitHub\ShareIt\ShareIt\bin\DotNetOpenAuth.OpenId.xml
+D:\myGitHub\ShareIt\ShareIt\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+D:\myGitHub\ShareIt\ShareIt\bin\Org.Mentalis.Security.Cryptography.xml
+D:\myGitHub\ShareIt\ShareIt\bin\Mono.Math.xml

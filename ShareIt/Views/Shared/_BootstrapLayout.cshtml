@@ -9,6 +9,7 @@
 
     <!-- Le styles -->
     @Styles.Render("~/Content/bootstrap")
+    @Styles.Render("~/Content/openid")
     <style type="text/css">
       body {
         padding-top: 60px;
@@ -51,21 +52,26 @@
           </a>
           <a class="brand" href="#">Partilha-me</a>
           <div class="btn-group pull-right">
+            @if(User.Identity.IsAuthenticated){
             <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-              <i class="icon-user"></i> Username
+              <i class="icon-user"></i> @Html.Encode(Session["FullName"] ?? Session["Email"])
               <span class="caret"></span>
             </a>
             <ul class="dropdown-menu">
               <li><a href="#">Profile</a></li>
               <li class="divider"></li>
-              <li><a href="#">Sign Out</a></li>
+              <li><a href="@Url.Action("logoff", "account")">Sign Out</a></li>
             </ul>
+           }else{
+           <a href="@Url.Action("LogOn", "account")" role="button" class="btn" >
+              <i class="icon-user"></i> Login using OpenID
+            </a>
+           }
           </div>
           <div class="nav-collapse">
             <ul class="nav">
-              <li class="active"><a href="#">Home</a></li>
+              <li class="active"><a href="@Url.Action("index", "home")">Home</a></li>
               <li><a href="#about">About</a></li>
-              <li><a href="#contact">Contact</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -87,6 +93,7 @@
 
     </div><!--/.fluid-container-->
 
+
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
@@ -95,22 +102,10 @@
     @Scripts.Render("~/bundles/bootstrap")
     @Scripts.Render("~/bundles/requirejs")
     @Scripts.Render("~/bundles/backbone")
-    @Scripts.Render("~/bundles/app")
+    @Scripts.Render("~/bundles/openid")
     @RenderSection("scripts", required: false)
 
-    @*<script src="../assets/js/jquery.js"></script>
-    <script src="../assets/js/bootstrap-transition.js"></script>
-    <script src="../assets/js/bootstrap-alert.js"></script>
-    <script src="../assets/js/bootstrap-modal.js"></script>
-    <script src="../assets/js/bootstrap-dropdown.js"></script>
-    <script src="../assets/js/bootstrap-scrollspy.js"></script>
-    <script src="../assets/js/bootstrap-tab.js"></script>
-    <script src="../assets/js/bootstrap-tooltip.js"></script>
-    <script src="../assets/js/bootstrap-popover.js"></script>
-    <script src="../assets/js/bootstrap-button.js"></script>
-    <script src="../assets/js/bootstrap-collapse.js"></script>
-    <script src="../assets/js/bootstrap-carousel.js"></script>
-    <script src="../assets/js/bootstrap-typeahead.js"></script>*@
+    
 
   </body>
 </html>
